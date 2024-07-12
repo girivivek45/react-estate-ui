@@ -8,9 +8,10 @@ import {
 import ListPage from "./routes/listPage/listPage";
 import Layout from "./routes/layout/layout";
 import SinglePage from "./routes/singlePage/SinglePage";
+import ProfilePage from "./routes/profilePage/profilePage";
 
 function App() {
-const router = createBrowserRouter([{
+const router = createBrowserRouter([{ 
   path: "/",
   element: <Layout/>,
   children: [
@@ -25,6 +26,10 @@ const router = createBrowserRouter([{
     {
       path: "/:id",
       element: <SinglePage/>
+    },
+    {
+      path: "/profile",
+      element:<ProfilePage/>
     }
   ]
 }]);
